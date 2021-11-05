@@ -1,0 +1,34 @@
+<%- include('../partials/html-head') %>
+
+
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>CREATE CHARACTER</h1>
+  <form action="/characters" method="POST">
+    <label>
+      Name:
+        <input type="text" name="name">
+    </label></br>
+    <label>
+      Race:
+        <select name="race">
+          <option value="Dragonborn">Dragonborn</option>
+          <option value="Dwarf">Dwarf</option>
+          <option value="Elf">Elf</option>
+          <option value="Gnome">Gnome</option>
+          <option value="Half-Elf">Half-Elf</option>
+          <option value="Halfling">Halfling</option>
+          <option value="Half-Orc">Half-Orc</option>
+          <option value="Human">Human</option>
+          <option value="Tiefling">Tiefling</option>
+        </select>
+    </label></br>
+    <label>
+    </label>
+    <label>
+    </label>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>
