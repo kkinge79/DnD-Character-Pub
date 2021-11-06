@@ -1,0 +1,52 @@
+<%- include('../partials/html-head') %>
+
+
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Edit CHARACTER</h1>
+  <form action="/characters/" method="POST">
+    <label>
+      Name:
+        <input type="text" name="name" value="<%= character.name%>" required>
+    </label></br>
+    <label>
+      Race:
+        <select name="race" value="<%= character.name%>">
+          <option value="Dragonborn">Dragonborn</option>
+          <option value="Dwarf">Dwarf</option>
+          <option value="Elf">Elf</option>
+          <option value="Gnome">Gnome</option>
+          <option value="Half-Elf">Half-Elf</option>
+          <option value="Halfling">Halfling</option>
+          <option value="Half-Orc">Half-Orc</option>
+          <option value="Human">Human</option>
+          <option value="Tiefling">Tiefling</option>
+        </select>
+    </label></br>
+    <label>
+      Class:
+      <select name="class" value="<%= character.class %>">
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+      </select>
+    </label></br>
+    <label>
+      Age:
+        <input type="number" min="1" max="1000" name="age" value="<%= character.age %>" required>
+    </label></br>
+    <button type="submit">Save</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>
