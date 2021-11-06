@@ -6,13 +6,6 @@
   <table>
     <thead>
       <tr>
-        <%# if (character.owner.equals(user?.profile._id)) { %>
-          <form action="/characters/<%= characters._id %>/edit" method="GET">
-            <button class="btn" type="submit">Edit character</button>
-          </form>
-          <%# } %>
-      </tr>
-      <tr>
         <th>Name:</th>
         <th>Race:</th>
         <th>Class:</th>
@@ -26,9 +19,13 @@
         <td><%= characters.class %></td>
         <td><%= characters.age %></td>
       </tr>
-
     </tbody>
   </table>
+          <%# if (character.owner.equals(user?.profile._id)) { %>
+            <form action="/characters/<%= characters._id %>/edit" method="GET">
+              <button class="btn" type="submit">Edit character</button>
+            </form>
+            <%# } %>
 </container>
 
 <%- include('../partials/footer') %>

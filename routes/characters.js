@@ -16,7 +16,7 @@ router.get("/:id/edit", isLoggedIn, charactersCtrl.edit)
 
 router.put('/:id', isLoggedIn, charactersCtrl.update)
 
-router.delete("/:id", charactersCtrl.delete)
+router.delete("/:id", isLoggedIn , charactersCtrl.delete)
 
 
 

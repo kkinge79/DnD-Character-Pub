@@ -70,8 +70,8 @@ function edit(req, res) {
   Character.findById(req.params.id)
   .then(character => {
     res.render("characters/edit", {
-      title: "Edit character",
       character,
+      title: "Edit character",
     })
   })
   .catch(err => {
