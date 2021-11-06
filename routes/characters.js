@@ -12,6 +12,10 @@ router.post('/', isLoggedIn, charactersCtrl.create)
 
 router.get('/:id', charactersCtrl.show)
 
+router.get("/:id/edit", charactersCtrl.edit)
+
+// router.put('/:id', charactersCtrl.update)
+
 router.delete("/:id", charactersCtrl.delete)
 
 

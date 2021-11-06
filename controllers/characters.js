@@ -66,10 +66,26 @@ function deleteCharacter(req, res) {
   })
 }
 
+function edit(req, res) {
+  Character.findByIdAndUpdate(req.params.id)
+  .then(character => {
+    res.render("characters/edit", {
+      title: "Edit character",
+      character,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/characters")
+  })
+}
+
 export {
   newCharacter as new,
   create,
   index,
   show,
-  deleteCharacter as delete
+  deleteCharacter as delete,
+  edit,
+  
 }
