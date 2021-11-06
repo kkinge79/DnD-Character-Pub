@@ -7,6 +7,7 @@ const characterSchema = new Schema ({
   race: String,
   class: String,
   age: Number,
+  owner: {type: Schema.Types.ObjectId, ref:"Profile"},
 })
 
 const Character = mongoose.model('Character', characterSchema)

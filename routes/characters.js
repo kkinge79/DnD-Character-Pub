@@ -12,6 +12,11 @@ router.post('/', isLoggedIn, charactersCtrl.create)
 
 router.get('/:id', charactersCtrl.show)
 
+router.delete("/:id", charactersCtrl.delete)
+
+
+
+
 export {
   router
 }
