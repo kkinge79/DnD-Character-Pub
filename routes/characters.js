@@ -10,6 +10,8 @@ router.get('/new', isLoggedIn, charactersCtrl.new)
 
 router.post('/', isLoggedIn, charactersCtrl.create)
 
+router.post("/:id/comments", isLoggedIn, charactersCtrl.createComment)
+
 router.get('/:id', charactersCtrl.show)
 
 router.get("/:id/edit", isLoggedIn, charactersCtrl.edit)

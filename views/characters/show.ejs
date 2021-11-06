@@ -26,6 +26,65 @@
               <button class="btn" type="submit">Edit character</button>
             </form>
             <%# } %>
+
+
+
+            <h2>Comments</h2>
+            <form 
+              id="add-comment-form"
+              action="/characters/<%= characters._id %>/comments"
+              method="POST"
+            >
+          
+            
+              <label for="content-textarea">Comment:</label>
+              <textarea name="content" id="content-textarea"></textarea>
+              <label for="rated-select">Rate:</label>
+              <select name="rated" id="rated-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+              </select>
+              <button type="submit">Add Comment</button>
+            </form>
+          
+          
+          
+            <% if (characters.comments.length) { %>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Comment</th>
+                    <th>Rated</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <% let total = 0 %> 
+                  <% characters.comments.forEach(function(comment){ %>
+                    <% total += comment.rated %> 
+                    <tr>
+                      <td><%= comment.createdAt.toLocaleDateString() %> </td>
+                      <td><%= comment.content %></td>
+                      <td><%= comment.rated %> </td>
+                    </tr>
+                  <% }) %>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td>
+                      <strong><%= averageCommentScore %></strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            <% } else { %>
+              <h3>No Comments Yet</h3>
+            <% } %>
 </container>
+
+
 
 <%- include('../partials/footer') %>
