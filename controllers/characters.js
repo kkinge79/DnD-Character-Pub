@@ -18,7 +18,14 @@ function create(req, res){
   })
 }
 
+function index(req, res) {
+  res.render('characters/index', {
+    title: "Profile",
+  })
+}
+
 export {
   newCharacter as new,
   create,
+  index,
 }
