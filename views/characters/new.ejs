@@ -8,7 +8,7 @@
   <form action="/characters" method="POST">
     <label>
       Name:
-        <input type="text" name="name">
+        <input type="text" name="name" required>
     </label></br>
     <label>
       Race:
@@ -43,7 +43,7 @@
     </label></br>
     <label>
       Age:
-        <input type="number" min="1" max="1000">
+        <input type="number" min="1" max="1000" name="age" required>
     </label></br>
     <button type="submit">Create</button>
   </form>

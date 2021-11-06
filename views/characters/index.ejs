@@ -11,21 +11,19 @@
         <th>Name:</th>
         <th>Race:</th>
         <th>Class</th>
-        <th>Age:</th>
-  
       </tr>
     </thead>
     <tbody>
-      <!-- <%# characters.forEach(c => { %>
+      <% characters.forEach(c => { %>
       <tr>
-        <td><%#= c.name %></td>
-        <td><%#= c.race %></td>
-        <td><%#= c.class %></td>
-        <td><%#= c.age %></td>
+        <td><%= c.name %></td>
+        <td><%= c.race %></td>
+        <td><%= c.class %></td>
         <td>
+          <a href="/characters/<%= c._id %>">Details</a>
         </td>
       </tr>
-      <%# }) %> -->
+      <% }) %>
     </tbody>
   </table>
 </container>
