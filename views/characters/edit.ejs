@@ -5,14 +5,22 @@
 
 <main>
   <h1>Edit CHARACTER</h1>
-  <form action="/characters/" method="POST">
+  <form action="/characters/<%= character._id %>?_method=PUT" method="POST">
     <label>
       Name:
-        <input type="text" name="name" value="<%= character.name%>" required>
+        <input 
+        type="text" 
+        name="name" 
+        value="<%= character.name%>" 
+        required
+        >
     </label></br>
     <label>
       Race:
-        <select name="race" value="<%= character.name%>">
+        <select 
+        name="race"
+        >
+          <option value="<%= character.race %>"><%= character.race%></option>
           <option value="Dragonborn">Dragonborn</option>
           <option value="Dwarf">Dwarf</option>
           <option value="Elf">Elf</option>
@@ -26,7 +34,10 @@
     </label></br>
     <label>
       Class:
-      <select name="class" value="<%= character.class %>">
+      <select 
+      name="class"
+      >
+        <option value="<%= character.class %>"><%= character.class%></option>
         <option value="Barbarian">Barbarian</option>
         <option value="Bard">Bard</option>
         <option value="Cleric">Cleric</option>
@@ -43,7 +54,14 @@
     </label></br>
     <label>
       Age:
-        <input type="number" min="1" max="1000" name="age" value="<%= character.age %>" required>
+        <input 
+        type="number" 
+        min="1" 
+        max="1000" 
+        name="age" 
+        value="<%= character.age %>" 
+        required
+        >
     </label></br>
     <button type="submit">Save</button>
   </form>

@@ -67,12 +67,30 @@ function deleteCharacter(req, res) {
 }
 
 function edit(req, res) {
-  Character.findByIdAndUpdate(req.params.id)
+  Character.findById(req.params.id)
   .then(character => {
     res.render("characters/edit", {
       title: "Edit character",
       character,
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/characters")
+  })
+}
+
+function update(req, res) {
+  Character.findById(req.params.id)
+  .then(character => {
+    if (character.owner.equals(req.user.profile._id)) {
+      character.updateOne(req.body, {new: true})
+      .then(() => {
+        res.redirect(`/characters/${character._id}`)
+      })
+    } else {
+      throw new Error ("Unauthorized user")
+    }
   })
   .catch(err => {
     console.log(err)
@@ -87,5 +105,6 @@ export {
   show,
   deleteCharacter as delete,
   edit,
+  update,
   
 }

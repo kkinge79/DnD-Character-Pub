@@ -12,9 +12,9 @@ router.post('/', isLoggedIn, charactersCtrl.create)
 
 router.get('/:id', charactersCtrl.show)
 
-router.get("/:id/edit", charactersCtrl.edit)
+router.get("/:id/edit", isLoggedIn, charactersCtrl.edit)
 
-// router.put('/:id', charactersCtrl.update)
+router.put('/:id', isLoggedIn, charactersCtrl.update)
 
 router.delete("/:id", charactersCtrl.delete)
 
