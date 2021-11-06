@@ -2,6 +2,26 @@
 
 <%- include('../partials/nav') %>
 
+<container>
+  <table>
+    <thead>
+      <tr>
+        <th>Name:</th>
+        <th>Race:</th>
+        <th>Class:</th>
+        <th>Age:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= characters.name %></td>
+        <td><%= characters.race %></td>
+        <td><%= characters.class %></td>
+        <td><%= characters.age %></td>
+      </tr>
 
+    </tbody>
+  </table>
+</container>
 
 <%- include('../partials/footer') %>

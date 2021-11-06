@@ -36,9 +36,9 @@ function index(req, res) {
 
 function show(req, res) {
   Character.findById(req.params.id)
-  .then(character => {
+  .then(characters => {
     res.render("characters/show", {
-      character,
+      characters,
       title: "Details"
     })
   })
