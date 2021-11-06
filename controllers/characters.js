@@ -7,9 +7,18 @@ function newCharacter(req, res) {
   })
 }
 
-
+function create(req, res){
+  Character.create(req.body)
+  .then(Char => {
+    res.redirect("/")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 
 export {
   newCharacter as new,
-  
+  create,
 }
