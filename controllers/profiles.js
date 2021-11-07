@@ -1,3 +1,4 @@
+import { Character } from "../models/character.js"
 import { Profile } from "../models/profile.js"
 
 function index(req, res) {
@@ -17,15 +18,18 @@ function index(req, res) {
 function show(req, res) {
   Profile.findById(req.params.id)
   .then((profile) => {
-    Profile.findById(req.params.id)
-    .then(self => {
-      const isSelf = self._id.equals(profile._id)
-      console.log(profile)
-      res.render("profiles/show", {
-        title: `${profile.name}'s profile`,
-        profile,
-        self,
-        isSelf,
+    Character.find({owner:profile._id})
+    .then(characters => {
+      Profile.findById(req.user.profile._id)
+      .then(self => {
+        const isSelf = self._id.equals(profile._id)
+        res.render("profiles/show", {
+          title: `${profile.name}'s profile`,
+          profile,
+          self,
+          isSelf,
+          characters,
+        })
       })
     })
   })
@@ -35,8 +39,8 @@ function show(req, res) {
   })
 }
 
+
 export {
   index, 
   show,
-
 }

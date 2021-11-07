@@ -1,17 +1,25 @@
 import { Character } from "../models/character.js"
+import { Profile } from "../models/profile.js"
 
 
 function newCharacter(req, res) {
   res.render('characters/new', {
     title: "Create Character",
+    owner: req.user.profile._id,
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/characters")
   })
 }
 
 function create(req, res){
   req.body.owner = req.user.profile._id
   Character.create(req.body)
-  
   .then(Char => {
+    Profile.updateOne({_id:Char.owner}, {
+      $push:{characters: Char}
+    })
     res.redirect("/characters")
   })
   .catch(err => {
@@ -21,7 +29,7 @@ function create(req, res){
 }
 
 function index(req, res) {
-  Character.find({})
+  Character.find({owner: req.user.profile._id})
   .then(characters => {
     res.render("characters/index", {
       title: "Profile",
@@ -36,6 +44,7 @@ function index(req, res) {
 
 function show(req, res) {
   Character.findById(req.params.id)
+  .populate("owner")
   .then(characters => {
     let total = 0
     characters.comments.forEach(function(comment) {
@@ -90,14 +99,14 @@ function edit(req, res) {
 function update(req, res) {
   Character.findById(req.params.id)
   .then(character => {
-     if (character.owner.equals(req.user.profile._id)) {
+      if (character.owner.equals(req.user.profile._id)) {
       character.updateOne(req.body, {new: true})
       .then(() => {
         res.redirect(`/characters/${character._id}`)
       })
-     } else {
-       throw new Error ("Unauthorized user")
-     }
+      } else {
+        throw new Error ("Unauthorized user")
+    }
   })
   .catch(err => {
     console.log(err)
@@ -127,4 +136,5 @@ export {
   edit,
   update,
   createComment,
+
 }

@@ -22,24 +22,15 @@
       </tr>
     </thead>
     <tbody>
-      <% profile.characters.forEach(c => { %>
+    </section>
+      <% characters.forEach(c => { %>
       <tr>
         <td><%= c.name %></td>
         <td><%= c.race %></td>
         <td><%= c.class %></td>
         <td>
-          <a href="/profiles/<%= c._id %>">Details</a>
+          <a href="/characters/<%= c._id %>">Details</a>
         </td>
-        <td>
-          <% if (isSelf) { %>
-          <form action="/profiles/<%= c._id %>?_method=DELETE" method="POST">
-            <button type="submit">DELETE CHARACTER</button>
-          </form>
-          <% } else { %>
-            ""
-            <% } %> 
-        </td>
-      </td>
       </tr>
       <% }) %>
     </tbody>
