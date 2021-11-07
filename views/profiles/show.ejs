@@ -1,0 +1,51 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <% if (profile.avatar) { %>
+    <div>
+      <img 
+        class="profile-avatar"
+        src="<%= profile.avatar %>" 
+        alt="<%= profile.name %> avatar"
+      >
+    </div>
+  <% } %>
+  <h1>Profile</h1>
+<container>
+  <table>
+    <thead>
+      <tr>
+        <th>Name:</th>
+        <th>Race:</th>
+        <th>Class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% profile.characters.forEach(c => { %>
+      <tr>
+        <td><%= c.name %></td>
+        <td><%= c.race %></td>
+        <td><%= c.class %></td>
+        <td>
+          <a href="/profiles/<%= c._id %>">Details</a>
+        </td>
+        <td>
+          <% if (isSelf) { %>
+          <form action="/profiles/<%= c._id %>?_method=DELETE" method="POST">
+            <button type="submit">DELETE CHARACTER</button>
+          </form>
+          <% } else { %>
+            ""
+            <% } %> 
+        </td>
+      </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</container>
+
+</main>
+
+<%- include('../partials/footer') %>

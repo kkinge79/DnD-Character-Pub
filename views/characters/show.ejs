@@ -21,11 +21,14 @@
       </tr>
     </tbody>
   </table>
-          <%# if (character.owner.equals(user?.profile._id)) { %>
+          <% if (characters.owner.equals(user?.profile._id)) { %>
             <form action="/characters/<%= characters._id %>/edit" method="GET">
               <button class="btn" type="submit">Edit character</button>
             </form>
-            <%# } %>
+            <form action="/characters/<%= characters._id %>?_method=DELETE" method="POST">
+              <button type="submit">Delete</button>
+            </form>
+            <% } %>
 
 
 

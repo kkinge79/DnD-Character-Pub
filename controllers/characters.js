@@ -8,7 +8,9 @@ function newCharacter(req, res) {
 }
 
 function create(req, res){
+  req.body.owner = req.user.profile._id
   Character.create(req.body)
+  
   .then(Char => {
     res.redirect("/characters")
   })
@@ -20,9 +22,7 @@ function create(req, res){
 
 function index(req, res) {
   Character.find({})
-  // When we have all the tacos
   .then(characters => {
-    // Do something with the tacos
     res.render("characters/index", {
       title: "Profile",
       characters,
@@ -42,6 +42,7 @@ function show(req, res) {
       total += comment.rated
     })
     let averageCommentScore = ( total / characters.comments.length).toFixed(1)
+    console.log(characters)
     res.render("characters/show", {
       characters,
       title: "Details",
@@ -89,14 +90,14 @@ function edit(req, res) {
 function update(req, res) {
   Character.findById(req.params.id)
   .then(character => {
-    // if (character.owner.equals(req.user.profile._id)) {
+     if (character.owner.equals(req.user.profile._id)) {
       character.updateOne(req.body, {new: true})
       .then(() => {
         res.redirect(`/characters/${character._id}`)
       })
-    // } else {
-    //   throw new Error ("Unauthorized user")
-    // }
+     } else {
+       throw new Error ("Unauthorized user")
+     }
   })
   .catch(err => {
     console.log(err)
