@@ -7,10 +7,12 @@
 <main>
   <h1>CREATE CHARACTER</h1>
   <form action="/characters" method="POST">
+    <!-- NAME -->
     <label>
       Name:
         <input type="text" name="name" required>
     </label></br>
+    <!-- RACE -->
     <label>
       Race:
         <select name="race">
@@ -25,6 +27,7 @@
           <option value="Tiefling">Tiefling</option>
         </select>
     </label></br>
+    <!-- CLASS -->
     <label>
       Class:
       <select name="class">
@@ -42,10 +45,12 @@
         <option value="Wizard">Wizard</option>
       </select>
     </label></br>
+    <!-- AGE -->
     <label>
       Age:
         <input type="number" min="1" max="1000" name="age" required>
     </label></br>
+    <!-- ALIGNMENT -->
     <label>
       Alignment:
       <select name="alignment">
@@ -60,6 +65,7 @@
         <option value="Chaotic-Evil">Chaotic Evil</option>
       </select>
     </label><br>
+    <!-- BACKGROUND -->
     <label>
       Background:
       <select name="background">
@@ -82,26 +88,64 @@
       </select>
       <a href="https://www.dndbeyond.com/backgrounds?filter-name=&filter-source=2" target="_blank" rel="noopener noreferrer">Click me if you want more information on these backgrounds!
       </a>
-    </label><br>
+    </label><br><br>
     <h2>PERSONALITY</h2>
-    <div id="per-tra-hlp">
-    <h5>Please Choose 3 personality Traits</h5>
+    <div id="help">
+      <!-- PERSOANLITY TRAITS -->
+    <h5><Strong>Personality Traits:</Strong>Choose 2 personality Traits</h5>
     <div class="help-tip">
       <p> Personality traits are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self-descriptions that are specific about what makes your character stand out.</p>
-  </div>
-</div>
+    </div>
+    </div>
     <label>
+      trait #1
       <input type="text" name="ptone" required>
     </label><br>
     <label>
+      trait #2
       <input type="text" name="pttwo" required>
-    </label><br>
+    </label><br><br>
+    <!-- IDEALS -->
+    <div id="help">
+      <h5>Describe One ideal that drives your character</h5>
+      <div class="help-tip">
+        <p>Ideals might answer any of these questions: What are the principles that you will never betray? What would prompt you to make sacrifices? What drives you to act and guides your goals and ambitions? What is the single most important thing you strive for? 
+        </p>
+      </div>
+      </div>
+      <label>
+        Ideals:
+        <textarea rows="3" cols="20" id="title" name="ideals" required>
+        </textarea>
+      </label><br>
+  <!-- BONDS -->
+  <div id="help">
+    <h5><strong>Bond:</strong>Create one bond for your character</h5>
+    <div class="help-tip">
+      <p>
+        Bonds represent a character’s connections to people, places, and events in the world. They tie you to things from your background. Bonds might answer any of these questions: Whom do you care most about? To what place do you feel a special connection? What is your most treasured possession? Your bonds might be tied to your class, your background, your race, or some other aspect of your character’s history or personality.
+      </p>
+    </div>
+    </div>
     <label>
-      <input type="text" name="ptthree" required>
+      Bonds:
+      <textarea rows="3" cols="20" id="title" name="ideals" required>
+      </textarea>
     </label><br>
-
-
-
+  <!-- FLAWS -->
+  <div id="help">
+    <h5><strong>Flaws:</strong>Choose a Flaw for your Character</h5>
+    <div class="help-tip">
+      <p>
+        Your character’s flaw represents some vice, compulsion, fear, or weakness—in particular, anything that someone else could exploit to bring you to ruin or cause you to act against your best interests. A flaw might answer any of these questions: What enrages you? What’s the one person, concept, or event that you are terrified of? What are your vices?
+      </p>
+    </div>
+    </div>
+    <label>
+      Flaws:
+      <textarea rows="3" cols="20" id="title" name="ideals" required>
+      </textarea>
+    </label><br>
 
 
     <button type="submit">Create</button>
