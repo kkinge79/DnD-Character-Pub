@@ -6,17 +6,18 @@
 
 
 <main>
-  <h1>CREATE CHARACTER</h1>
-  <form action="/characters" method="POST">
+  <h1>MODIFY CHARACTER</h1>
+  <form action="/characters/<%= character._id %>?_method=PUT" method="POST">
     <!-- NAME -->
     <label>
       Name:
-        <input type="text" name="name" required>
+        <input type="text" name="name" value="<%= character.name %>" required>
     </label></br>
     <!-- RACE -->
     <label>
       Race:
         <select name="race">
+          <option value="<%= character.race %>"><%= character.race %></option>
           <option value="Dragonborn">Dragonborn</option>
           <option value="Dwarf">Dwarf</option>
           <option value="Elf">Elf</option>
@@ -32,6 +33,7 @@
     <label>
       Class:
       <select name="class">
+        <option value="<%= character.class %>"><%= character.class %></option>
         <option value="Barbarian">Barbarian</option>
         <option value="Bard">Bard</option>
         <option value="Cleric">Cleric</option>
@@ -49,12 +51,13 @@
     <!-- AGE -->
     <label>
       Age:
-        <input type="number" min="1" max="1000" name="age" required>
+        <input type="number" min="1" max="1000" name="age" value="<%= character.age %>" required>
     </label></br>
     <!-- ALIGNMENT -->
     <label>
       Alignment:
       <select name="alignment">
+        <option value="<%= character.alignment %>"><%= character.alignment %></option>
         <option value="Lawful-Good">Lawful Good</option>
         <option value="Neutral-Good">Neutral Good</option>
         <option value="Chaotic-Good">Chaotic Good</option>
@@ -70,6 +73,7 @@
     <label>
       Background:
       <select name="background">
+        <option value="<%= character.background %>"><%= character.background %></option>
         <option value="Acolyte">Acolyte</option>
         <option value="Charlatan">Charlatan</option>
         <option value="CriminalSpy">Criminal/Spy</option>
@@ -100,11 +104,11 @@
     </div>
     <label>
       trait #1
-      <input type="text" name="ptone" required>
+      <input type="text" name="ptone" value="<%= character.ptone %>" required>
     </label><br>
     <label>
       trait #2
-      <input type="text" name="pttwo" required>
+      <input type="text" name="pttwo" value="<%= character.pttwo %>" required>
     </label><br><br>
     <!-- IDEALS -->
     <div id="help">
@@ -117,8 +121,7 @@
       </div>
       <label>
         Ideals:
-        <textarea rows="3" cols="20" id="title" name="ideals" required>
-        </textarea>
+        <textarea rows="3" cols="20" id="title" name="ideals" required><%= character.ideals %></textarea>
       </label><br>
   <!-- BONDS -->
   <div id="help">
@@ -131,8 +134,7 @@
     </div>
     <label>
       Bonds:
-      <textarea rows="3" cols="20" id="title" name="ideals" required>
-      </textarea>
+      <textarea rows="3" cols="20" id="title" name="bonds" required><%= character.bonds %></textarea>
     </label><br>
   <!-- FLAWS -->
   <div id="help">
@@ -145,17 +147,60 @@
     </div>
     <label>
       Flaws:
-      <textarea rows="3" cols="20" id="title" name="ideals" required>
-      </textarea>
+      <textarea rows="3" cols="20" id="title" name="flaws" required><%= character.flaws %></textarea>
     </label><br>
   <!-- SKILLS -->
+  <h2>SKILLS</h2>
+  <label>
+    <h5><strong>Skill:</strong>select 5 skills your character will be proficient in</h5>
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <div id="list1" class="dropdown-check-list" tabindex="100">
+          <span class="anchor">Select Skills</span>
+          <ul class="items" >
+            <li><input name="skills" type="checkbox" value="Athletics"
+              <%= character.skills.includes("Athletics") ? "checked" : ""  %>
+              />Athletics<i> Str</i></li>
+            <li><input name="skills" type="checkbox" value="Acrobatics"/>Acrobatics<i> Dex</i></li>
+            <li><input name="skills" type="checkbox" value="Sleight of Hand"/>Sleight of Hand<i> Dex</i></li>
+            <li><input name="skills" type="checkbox" value="Stealth"/>Stealth<i> Dex</i></li>
+            <li><input name="skills" type="checkbox" value="Arcana"/>Arcana<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="History"/>History<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Investigation"/>Investigation<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Nature"/>Nature<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Religion"/>Religion<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Animal Handling"/>Animal Handling<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Insight"/>Insight<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Medicine"/>Medicine<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Perception"/>Perception<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Survival"/>Survival<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Deception"/>Deception<i> Char</i></li>
+            <li><input name="skills" type="checkbox" value="Intimidation"/>Intimidation<i> Char</i></li>
+            <li><input name="skills" type="checkbox" value="Performance"/>Performance<i> Char</i></li>
+            <li><input name="skills" type="checkbox" value="Persuasion"/>Persuasion<i> Char</i></li>
+          </ul>
+        </div>
+        </div>
+        </div>
+      </label>
+  
 
 
 
-    <button type="submit">Create</button>
-    <input hidden name="owner" value="<%= owner %>">
+
+    <button type="submit">Save</button>
   </form>
 </main>
+
+<script>
+  var checkList = document.getElementById('list1');
+checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList.classList.contains('visible'))
+    checkList.classList.remove('visible');
+  else
+    checkList.classList.add('visible');
+}
+</script>
 
 
 <%- include('../partials/footer') %>

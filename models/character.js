@@ -21,13 +21,12 @@ const characterSchema = new Schema ({
   ideals: String,
   bonds: String,
   flaws: String,
-  skills: String,
+  skills: [String],
   attacks: String,
   spells: String,
   feats:  String,
   traits: String,
   equipment: String,
-
   comments: [commentSchema],
   owner: {type: Schema.Types.ObjectId, ref:"Profile"},
 }, {

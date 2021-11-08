@@ -17,6 +17,7 @@ function create(req, res){
   req.body.owner = req.user.profile._id
   Character.create(req.body)
   .then(Char => {
+    console.log("!!!!", req.body)
     Profile.updateOne({_id:Char.owner}, {
       $push:{characters: Char}
     })

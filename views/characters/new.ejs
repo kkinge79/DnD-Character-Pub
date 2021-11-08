@@ -86,7 +86,7 @@
         <option value="Soldier">Soldier</option>
         <option value="Urchin">Urchin</option>
       </select>
-      <a href="https://www.dndbeyond.com/backgrounds?filter-name=&filter-source=2" target="_blank" rel="noopener noreferrer">Click me if you want more information on these backgrounds!
+      <a href="https://www.skullsplitterdice.com/blogs/dnd/5e-background-for-dungeons-and-dragons" target="_blank" rel="noopener noreferrer">Click me if you want more information on these backgrounds!
       </a>
     </label><br><br>
     <h2>PERSONALITY</h2>
@@ -100,8 +100,6 @@
     <label>
       trait #1
       <input type="text" name="ptone" required>
-    </label><br>
-    <label>
       trait #2
       <input type="text" name="pttwo" required>
     </label><br><br>
@@ -142,16 +140,63 @@
     </div>
     </div>
     <label>
-      Bonds:
+      Flaws:
       <textarea rows="3" cols="20" id="title" name="flaws" required>
       </textarea>
     </label><br>
   <!-- SKILLS -->
-  
+  <h2>SKILLS</h2>
+  <label>
+    <h5><strong>Skill:</strong>select 5 skills your character will be proficient in</h5>
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <div id="list1" class="dropdown-check-list" tabindex="100">
+          <span class="anchor">Select Skills</span>
+          <ul class="items" >
+            <li><input name="skills" type="checkbox" value="Athletics"/>Athletics<i> Str</i></li>
+            <li><input name="skills" type="checkbox" value="Acrobatics"/>Acrobatics<i> Dex</i></li>
+            <li><input name="skills" type="checkbox" value="Sleight of Hand"/>Sleight of Hand<i> Dex</i></li>
+            <li><input name="skills" type="checkbox" value="Stealth"/>Stealth<i> Dex</i></li>
+            <li><input name="skills" type="checkbox" value="Arcana"/>Arcana<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="History"/>History<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Investigation"/>Investigation<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Nature"/>Nature<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Religion"/>Religion<i> Int</i></li>
+            <li><input name="skills" type="checkbox" value="Animal Handling"/>Animal Handling<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Insight"/>Insight<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Medicine"/>Medicine<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Perception"/>Perception<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Survival"/>Survival<i> Wis</i></li>
+            <li><input name="skills" type="checkbox" value="Deception"/>Deception<i> Char</i></li>
+            <li><input name="skills" type="checkbox" value="Intimidation"/>Intimidation<i> Char</i></li>
+            <li><input name="skills" type="checkbox" value="Performance"/>Performance<i> Char</i></li>
+            <li><input name="skills" type="checkbox" value="Persuasion"/>Persuasion<i> Char</i></li>
+          </ul>
+        </div>
+        </div>
+        </div>
+      </label>
+
+
+
+
+
+
 
     <button type="submit">Create</button>
     <input hidden name="owner" value="<%= owner %>">
   </form>
 </main>
+
+
+<script>
+  var checkList = document.getElementById('list1');
+checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList.classList.contains('visible'))
+    checkList.classList.remove('visible');
+  else
+    checkList.classList.add('visible');
+}
+</script>
 
 <%- include('../partials/footer') %>
