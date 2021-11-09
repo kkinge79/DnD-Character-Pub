@@ -3,7 +3,14 @@
 
 <%- include('../partials/nav') %>
 
-<h1>Profile</h1>
+<% if (user?.profile.avatar) { %>
+  <div>
+    <img 
+      src="<%= user.profile.avatar %>" 
+      alt="<%= user.profile.name %> avatar"
+    >
+  </div>
+<% } %>
 <container>
   <table>
     <thead>
