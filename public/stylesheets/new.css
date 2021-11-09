@@ -104,7 +104,7 @@
   cursor: pointer;
   display: inline-block;
   padding: 5px 50px 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
 }
 
 .dropdown-check-list .anchor:after {
@@ -131,7 +131,7 @@
   padding: 2px;
   display: none;
   margin: 0;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-top: none;
 }
 
