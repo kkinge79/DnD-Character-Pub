@@ -22,11 +22,7 @@ const characterSchema = new Schema ({
   bonds: String,
   flaws: String,
   skills: [String],
-  attacks: String,
-  spells: String,
-  feats:  String,
-  traits: String,
-  equipment: String,
+  descript: String,
   comments: [commentSchema],
   owner: {type: Schema.Types.ObjectId, ref:"Profile"},
 }, {
