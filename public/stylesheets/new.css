@@ -24,13 +24,11 @@
   content:'?';
   font-weight: bold;
   color:#fff;
-  z-index: -1;
 }
 
 .help-tip:hover p{
   display:block;
   transform-origin: 100% 0%;
-  z-index: -1;
 
   -webkit-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
@@ -38,6 +36,7 @@
 }
 
 .help-tip p{
+  margin-left: 25px;
   display: none;
   text-align: left;
   background-color: #1E2021;
@@ -49,7 +48,6 @@
   color: #FFF;
   font-size: 13px;
   line-height: 1.4;
-  z-index: -1;
 }
 
 .help-tip p:before{
@@ -61,7 +59,6 @@
   border-bottom-color:#1E2021;
   right:10px;
   top:-12px;
-  z-index: -1;
 }
 
 .help-tip p:after{
@@ -71,7 +68,6 @@
   position: absolute;
   top:-40px;
   left:0;
-  z-index: -1;
 }
 
 
