@@ -12,6 +12,7 @@ nav a {
   padding: 14px 14px;
   text-decoration: none;
   font-size: 20px;
+  align-items: center;
 }
 i.fas.fa-dragon {
   display: flex;
