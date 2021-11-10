@@ -155,31 +155,29 @@
     <h5><strong>Skill:</strong>select 5 skills your character will be proficient in</h5>
     <p>CMD + Click for MAC</p>
     <p>CTRL + Click for WIN</p>
-          <!-- <span class="anchor">Select Skills</span>
+          <span class="anchor">Select Skills</span>
           <select name="skills" multiple="multiple">
-            <option <%= character.skills.includes("Persuasion") ? "checked" : ""  %>>Athletics<i> Str</i></option> -->
-            <option>Acrobatics<i> Dex</i></option>
-            <option>Sleight of Hand<i> Dex</i></option>
-            <option>Stealth<i> Dex</i></option>
-            <option>Arcana<i> Int</i></option>
-            <option>History<i> Int</i></option>
-            <option>Investigation<i> Int</i></option>
-            <option>Nature<i> Int</i></option>
-            <option>Religion<i> Int</i></option>
-            <option>Animal Handling<i> Wis</i></option>
-            <option>Insight<i> Wis</i></option>
-            <option>Medicine<i> Wis</i></option>
-            <option>Perception<i> Wis</i></option>
-            <option>Survival<i> Wis</i></option>
-            <option>Deception<i> Char</i></option>
-            <option>Intimidation<i> Char</i></option>
-            <option>Performance<i> Char</i></option>
-            <option>Persuasion<i> Char</i></option>
+            <option option selected="selected"><%= character.skills %>.</option>
+            <option>Athletics</option>
+            <option>Acrobatics</option>
+            <option>Sleight of Hand</option>
+            <option>Stealth</option>
+            <option>Arcana</option>
+            <option>History</option>
+            <option>Investigation</option>
+            <option>Nature</option>
+            <option>Religion</option>
+            <option>Animal Handling</option>
+            <option>Insight</option>
+            <option>Medicine</option>
+            <option>Perception</option>
+            <option>Survival</option>
+            <option>Deception</option>
+            <option>Intimidation</option>
+            <option>Performance</option>
+            <option>Persuasion</option>
           </select>
-      </label>
-<li><input name="skills" type="checkbox" value="Persuasion"<%= character.skills.includes("Persuasion") ? "checked" : ""  %>/>Persuasion<i> Char</i></li>
-
-
+        </label>
 
       <h5>Additional information on your character</h5>
       <label>

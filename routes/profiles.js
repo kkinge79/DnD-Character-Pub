@@ -8,8 +8,6 @@ router.get('/', profilesCtrl.index)
 
 router.get('/:id', isLoggedIn, profilesCtrl.show)
 
-
-
 export {
   router
 }
