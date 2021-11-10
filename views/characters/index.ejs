@@ -9,10 +9,23 @@
       src="<%= user.profile.avatar %>" 
       alt="<%= user.profile.name %> avatar"
     >
+    <% if (user) { %>
+      <a href="/auth/logout">
+        <button type="submit">Logout</button>
+      </a>
+    <% } else { %>
+      <a href="/auth/google" class="siwg-link">
+        <button type="submit" class="siwg">
+          <img id="siwg-image" alt="Sign in with Google" />
+        </button>
+      </a>
+    <% } %>
   </div>
 <% } %>
 <h1><%= user.profile.name %>'s Profile</h1>
 <container>
+  <% if (characters.length) { %>
+    <% characters.forEach(c => { %>
   <table>
     <thead>
       <tr>
@@ -22,7 +35,6 @@
       </tr>
     </thead>
     <tbody>
-      <% characters.forEach(c => { %>
       <tr>
         <td><%= c.name %></td>
         <td><%= c.race %></td>
@@ -33,6 +45,9 @@
       </td>
       </tr>
       <% }) %>
+      <% } else { %>
+        <h2>No Characters Yet :(</h2>
+        <% } %> 
     </tbody>
   </table>
 </container>
