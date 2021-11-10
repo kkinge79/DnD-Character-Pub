@@ -1,5 +1,9 @@
 <%- include('../partials/html-head') %>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@519&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="/stylesheets/new.css">
 
 <%- include('../partials/nav') %>
@@ -86,13 +90,13 @@
         <option value="Soldier">Soldier</option>
         <option value="Urchin">Urchin</option>
       </select>
-      <a href="https://www.skullsplitterdice.com/blogs/dnd/5e-background-for-dungeons-and-dragons" target="_blank" rel="noopener noreferrer">Click me if you want more information on these backgrounds!
+      <a href="https://www.skullsplitterdice.com/blogs/dnd/5e-background-for-dungeons-and-dragons" target="_blank" rel="noopener noreferrer">Click for more information on backgrounds
       </a>
     </label><br><br>
     <h2>PERSONALITY</h2>
     <div id="help">
       <!-- PERSOANLITY TRAITS -->
-    <h5><Strong>Personality Traits:</Strong>Choose 2 personality Traits</h5>
+    <h5>Choose 2 personality Traits</h5>
     <div class="help-tip">
       <p> Personality traits are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self-descriptions that are specific about what makes your character stand out.</p>
     </div>
@@ -117,7 +121,7 @@
       </label><br>
   <!-- BONDS -->
   <div id="help">
-    <h5><strong>Bond:</strong>Create one bond for your character</h5>
+    <h5>Create one bond for your character</h5>
     <div class="help-tip">
       <p>
         Bonds represent a character’s connections to people, places, and events in the world. They tie you to things from your background. Bonds might answer any of these questions: Whom do you care most about? To what place do you feel a special connection? What is your most treasured possession? Your bonds might be tied to your class, your background, your race, or some other aspect of your character’s history or personality.
@@ -130,7 +134,7 @@
     </label><br>
   <!-- FLAWS -->
   <div id="help">
-    <h5><strong>Flaws:</strong>Choose a Flaw for your Character</h5>
+    <h5>Choose a Flaw for your Character</h5>
     <div class="help-tip">
       <p>
         Your character’s flaw represents some vice, compulsion, fear, or weakness—in particular, anything that someone else could exploit to bring you to ruin or cause you to act against your best interests. A flaw might answer any of these questions: What enrages you? What’s the one person, concept, or event that you are terrified of? What are your vices?
@@ -144,10 +148,10 @@
   <!-- SKILLS -->
   <h2>SKILLS</h2>
   <label>
-    <h5><strong>Skill:</strong>select 5 skills your character will be proficient in</h5>
+    <h5>select 5 skills your character will be proficient in</h5>
+    <span class="anchor">Select Skills</span>
     <p>CMD + Click for MAC</p>
     <p>CTRL + Click for WIN</p>
-          <span class="anchor">Select Skills</span>
 
           <select name="skills" multiple="multiple" required>
             <option>Athletics<i> Str</i></option>
@@ -177,6 +181,7 @@
     <button type="submit">Create</button>
     <input hidden name="owner" value="<%= owner %>">
 </form>
+<br><br>
 </main>
 
 <%- include('../partials/footer') %>
