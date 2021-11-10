@@ -94,6 +94,7 @@ a {
   line-height: 26px;
   cursor: default;
   z-index: 3;
+  margin-left: 5px;
 }
 
 .help-tip:before{
