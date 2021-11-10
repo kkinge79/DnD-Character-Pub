@@ -12,6 +12,7 @@
   <li>Font Awesome</li>
   <li>MEN Stack</li>
   <li>Google Oauth</li>
+  <li>Bootstrap</li>
 </ul>
 
 <br><br>
