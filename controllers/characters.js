@@ -46,6 +46,7 @@ function index(req, res) {
 function show(req, res) {
   Character.findById(req.params.id)
   .populate("owner")
+  .populate("comments.owner")
   .then(characters => {
     let total = 0
     characters.comments.forEach(function(comment) {
@@ -116,6 +117,7 @@ function update(req, res) {
 }
 
 function createComment(req, res) {
+  req.body.owner = req.user.profile._id
   Character.findById(req.params.id)
   .then(character => {
     character.comments.push(req.body)

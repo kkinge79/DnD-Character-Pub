@@ -5,6 +5,7 @@ const profileSchema = new mongoose.Schema({
   avatar: String,
   characters: [{type: mongoose.Schema.Types.ObjectId, 
   ref: 'Character'}],
+
 }, {
   timestamps: true
 })

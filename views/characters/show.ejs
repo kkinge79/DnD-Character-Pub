@@ -1,6 +1,6 @@
 <%- include('../partials/html-head') %>
 
-
+<link rel="stylesheet" href="/stylesheets/details.css">
 
 <%- include('../partials/nav') %>
 
@@ -77,6 +77,7 @@
               <table>
                 <thead>
                   <tr>
+                    <th>Avatar</th>
                     <th>User</th>
                     <th>Date</th>
                     <th>Comment</th>
@@ -89,7 +90,8 @@
                   <% characters.comments.forEach(function(comment){ %>
                     <% total += comment.rated %> 
                     <tr>
-                      <td><%= user.profile.name %></td>
+                      <td><img src="<%= comment.owner.avatar %>"></td>
+                      <td><%= comment.owner.name %></td>
                       <td><%= comment.createdAt.toLocaleDateString() %> </td>
                       <td><%= comment.content %></td>
                       <td><%= comment.rated %> </td>

@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
   content: String,
-  rated: {type: Number, min: 1, max: 5, default: 5}
+  rated: {type: Number, min: 1, max: 5, default: 5},
+  owner: {type: Schema.Types.ObjectId, ref:"Profile"},
 }, {
   timestamps: true
 })
