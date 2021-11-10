@@ -1,4 +1,47 @@
-/* PERSONALITY TRAITS */
+body {
+  background-color: white;
+}
+
+main > h1 {
+  font-size: 25px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+  font-size: 16px;
+}
+
+
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 10px 5px 10px;
+}
+
+select {
+  margin: 10px 10px 5px 10px;
+
+}
+
+input {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* PERSONALITY TRAITS HELP TIP */
 #help {
   display: flex;
   flex-direction: row;
@@ -94,4 +137,5 @@
 
 
 
-/* dropdown selet  */
+
+
