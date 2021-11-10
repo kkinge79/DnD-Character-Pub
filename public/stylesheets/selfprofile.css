@@ -1,20 +1,130 @@
+body {
+  background-color: #eeeeee;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 div {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
+  padding-bottom: 40px;
 }
 
 h1 {
   padding-left: 7px;
   text-align: center;
-  font-size: 22px;
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 34px;
 }
 
 img {
   border-radius: 50%;
 }
 
+th {
+  font-size: 25px;
+  text-align: center;
+}
+
+td {
+  font-size: 23px;
+  text-align: center;
+}
+
+a {
+  font-size: 27px;
+  text-align: center;
+  justify-content: right;
+  align-items: right;
+  padding-left: 20px;
+}
+
+table {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 10px;
+}
+
 button {
-  text-align: right;
+  margin-top: 20px;
+}
+
+#name, #class, #race {
+  padding: 0 20px;
+
+}
+
+#logout-button {
+  font-size: 15px;
+  background-color: black;
+}
+
+.btn-primary {
+  background-color: black;
+  border-color: black;
+}
+
+
+@media screen and (max-width:480px) {
+  body {
+    background-color: #eeeeee;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  h1 {
+    padding-left: 7px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  th {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  td {
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  a {
+    font-size: 17px;
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+  }
+  
+  table {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
 }
