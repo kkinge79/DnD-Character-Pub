@@ -153,78 +153,38 @@
   <h2>SKILLS</h2>
   <label>
     <h5><strong>Skill:</strong>select 5 skills your character will be proficient in</h5>
-    <div class="multiselect">
-      <div class="selectBox" onclick="showCheckboxes()">
-        <div id="list1" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Select Skills</span>
-          <ul class="items" >
-            <li><input name="skills" type="checkbox" value="Athletics"
-              <%= character.skills.includes("Athletics") ? "checked" : ""  %>
-              />Athletics<i> Str</i></li>
-            <li><input name="skills" type="checkbox" value="Acrobatics"
-              <%= character.skills.includes("Acrobatics") ? "checked" : ""  %>
-              />Acrobatics<i> Dex</i></li>
-            <li><input name="skills" type="checkbox" value="Sleight of Hand"
-              <%= character.skills.includes("Sleight of Hand") ? "checked" : ""  %>
-              />Sleight of Hand<i> Dex</i></li>
-            <li><input name="skills" type="checkbox" value="Stealth"
-              <%= character.skills.includes("Stealth") ? "checked" : ""  %>
-              />Stealth<i> Dex</i></li>
-            <li><input name="skills" type="checkbox" value="Arcana"
-              <%= character.skills.includes("Arcana") ? "checked" : ""  %>
-              />Arcana<i> Int</i></li>
-            <li><input name="skills" type="checkbox" value="History"
-              <%= character.skills.includes("History") ? "checked" : ""  %>
-              />History<i> Int</i></li>
-            <li><input name="skills" type="checkbox" value="Investigation"
-              <%= character.skills.includes("Investigation") ? "checked" : ""  %>
-              />Investigation<i> Int</i></li>
-            <li><input name="skills" type="checkbox" value="Nature"
-              <%= character.skills.includes("Nature") ? "checked" : ""  %>
-              />Nature<i> Int</i></li>
-            <li><input name="skills" type="checkbox" value="Religion"
-              <%= character.skills.includes("Religion") ? "checked" : ""  %>
-              />Religion<i> Int</i></li>
-            <li><input name="skills" type="checkbox" value="Animal Handling"
-              <%= character.skills.includes("Animal Handling") ? "checked" : ""  %>
-              />Animal Handling<i> Wis</i></li>
-            <li><input name="skills" type="checkbox" value="Insight"
-              <%= character.skills.includes("Insight") ? "checked" : ""  %>
-              />Insight<i> Wis</i></li>
-            <li><input name="skills" type="checkbox" value="Medicine"
-              <%= character.skills.includes("Medicine") ? "checked" : ""  %>
-              />Medicine<i> Wis</i></li>
-            <li><input name="skills" type="checkbox" value="Perception"
-              <%= character.skills.includes("Perception") ? "checked" : ""  %>
-              />Perception<i> Wis</i></li>
-            <li><input name="skills" type="checkbox" value="Survival"
-              <%= character.skills.includes("Survival") ? "checked" : ""  %>
-              />Survival<i> Wis</i></li>
-            <li><input name="skills" type="checkbox" value="Deception"
-              <%= character.skills.includes("Deception") ? "checked" : ""  %>
-              />Deception<i> Char</i></li>
-            <li><input name="skills" type="checkbox" value="Intimidation"
-              <%= character.skills.includes("Intimidation") ? "checked" : ""  %>
-              />Intimidation<i> Char</i></li>
-            <li><input name="skills" type="checkbox" value="Performance"
-              <%= character.skills.includes("Performance") ? "checked" : ""  %>
-              />Performance<i> Char</i></li>
-            <li><input name="skills" type="checkbox" value="Persuasion"
-              <%= character.skills.includes("Persuasion") ? "checked" : ""  %>
-              />Persuasion<i> Char</i></li>
-          </ul>
-        </div>
-        </div>
-        </div>
+    <p>CMD + Click for MAC</p>
+    <p>CTRL + Click for WIN</p>
+          <!-- <span class="anchor">Select Skills</span>
+          <select name="skills" multiple="multiple">
+            <option <%= character.skills.includes("Persuasion") ? "checked" : ""  %>>Athletics<i> Str</i></option> -->
+            <option>Acrobatics<i> Dex</i></option>
+            <option>Sleight of Hand<i> Dex</i></option>
+            <option>Stealth<i> Dex</i></option>
+            <option>Arcana<i> Int</i></option>
+            <option>History<i> Int</i></option>
+            <option>Investigation<i> Int</i></option>
+            <option>Nature<i> Int</i></option>
+            <option>Religion<i> Int</i></option>
+            <option>Animal Handling<i> Wis</i></option>
+            <option>Insight<i> Wis</i></option>
+            <option>Medicine<i> Wis</i></option>
+            <option>Perception<i> Wis</i></option>
+            <option>Survival<i> Wis</i></option>
+            <option>Deception<i> Char</i></option>
+            <option>Intimidation<i> Char</i></option>
+            <option>Performance<i> Char</i></option>
+            <option>Persuasion<i> Char</i></option>
+          </select>
       </label>
+<li><input name="skills" type="checkbox" value="Persuasion"<%= character.skills.includes("Persuasion") ? "checked" : ""  %>/>Persuasion<i> Char</i></li>
+
+
+
       <h5>Additional information on your character</h5>
       <label>
         <textarea rows="5" cols="40" id="title" name="descript"><%= character.descript %></textarea>
       </label><br>
-
-
-
-
     <button type="submit">Save</button>
   </form>
 </main>

@@ -13,30 +13,33 @@
   <% } %>
   <h1><%= user.profile.name %>'s Profile</h1>
 <container>
-  <table>
-    <thead>
-      <tr>
-        <th>Name:</th>
-        <th>Race:</th>
-        <th>Class</th>
-      </tr>
-    </thead>
-    <tbody>
-    </section>
+    <% if (characters.length) { %>
       <% characters.forEach(c => { %>
-      <tr>
-        <td><%= c.name %></td>
-        <td><%= c.race %></td>
-        <td><%= c.class %></td>
-        <td>
-          <a href="/characters/<%= c._id %>">Details</a>
-        </td>
-      </tr>
-      <% }) %>
-    </tbody>
-  </table>
-</container>
-
-</main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name:</th>
+            <th>Race:</th>
+            <th>Class</th>
+          </tr>
+        </thead>
+        <tbody>
+        </section>
+      </tbody>
+    </table>
+    <tr>
+      <td><%= c.name %></td>
+      <td><%= c.race %></td>
+      <td><%= c.class %></td>
+      <td>
+        <a href="/characters/<%= c._id %>">Details</a>
+      </td>
+    </tr>
+    <% }) %>
+    <% } else { %>
+      <h2>No Characters Yet :(</h2>
+      <% } %> 
+    </container>
+    </main>
 
 <%- include('../partials/footer') %>
