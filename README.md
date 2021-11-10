@@ -67,5 +67,7 @@
 <h3>- Credit</h3>
 <ul>
   <li>font awesome icons</li>
-  <li>homescreen background image- reddit user u/RoyWijnen
+  <li>homescreen background image- reddit user u/RoyWijnen</li>
+  <li>create character background image - wallpapertip.com -contributor: Chao Krung Thai
+
 </ul>

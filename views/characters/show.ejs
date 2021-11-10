@@ -75,6 +75,7 @@
               <table>
                 <thead>
                   <tr>
+                    <th>User</th>
                     <th>Date</th>
                     <th>Comment</th>
                     <th>Rated</th>
@@ -86,6 +87,7 @@
                   <% characters.comments.forEach(function(comment){ %>
                     <% total += comment.rated %> 
                     <tr>
+                      <td><%= user.profile.name %></td>
                       <td><%= comment.createdAt.toLocaleDateString() %> </td>
                       <td><%= comment.content %></td>
                       <td><%= comment.rated %> </td>
