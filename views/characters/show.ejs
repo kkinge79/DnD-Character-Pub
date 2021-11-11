@@ -9,8 +9,7 @@
 
 <%- include('../partials/nav') %>
 
-<container>
-  <div id="editdelete">
+<div id="editdelete">
   <% if (characters.owner.equals(user?.profile._id)) { %>
     <form action="/characters/<%= characters._id %>/edit" method="GET">
       <button class="btn btn-primary" type="submit">Update</button>
@@ -18,9 +17,9 @@
     <form action="/characters/<%= characters._id %>?_method=DELETE" method="POST">
       <button class="btn btn-primary" type="submit">Delete</button>
     </form>
-    </div>
-    <% } %>
-
+  </div>
+  <% } %>
+  <div>
       <div id="info">
         <h2>Name</h2>
         <p><span><%= characters.name %></span></p>
@@ -45,70 +44,70 @@
         <h2>Skills</h2>
         <p><span><%= characters.skills %></span></p>
         <h2>Details</h2>
-        <p><span><%= characters.descript %></span>></p>
+        <p><span><%= characters.descript %></span></p>
       </div>
 
-            <h2>Comments</h2>
-            <container id="commentsection">
-            <form 
-              id="add-comment-form"
-              action="/characters/<%= characters._id %>/comments"
-              method="POST"
-            >
-              <textarea name="content" id="content-textarea" style="width: 40%; max-width: 50%;"></textarea>
-              <label for="rated-select">Rate:</label>
-              <select name="rated" id="rated-select">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5" selected>5</option>
-              </select>
-              <div class="commentbutton">
-              <button type="submit" class="btn btn-primary">Add</button>
-              </div>
-            </form>
-            <% if (characters.comments.length) { %>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Avatar</th>
-                    <th>User</th>
-                    <th>Date</th>
-                    <th>Comment</th>
-                    <th>Rated</th>
-                  </tr>
-                </thead>
-                
-                <tbody>
-                  <% let total = 0 %> 
-                  <% characters.comments.forEach(function(comment){ %>
-                    <% total += comment.rated %> 
-                    <tr>
-                      <td><%= comment.owner.name %></td>
-                      <td><img src="<%= comment.owner.avatar %>"></td>
-                      <td><%= comment.createdAt.toLocaleDateString() %> </td>
-                      <div class="comment">
-                      <td><span><%= comment.content %></span></td>
-                      </div>
-                      <td><%= comment.rated %> </td>
-                    </tr>
-                    <% }) %>
-                    <tr>
-                      <td colspan="2"></td>
-                      <td>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="totalrate">
-                <strong><%= averageCommentScore %></strong>
-                </div>
+      <div id="commentsection">
+        <h2>Comments</h2>
+        <form 
+          id="add-comment-form"
+          action="/characters/<%= characters._id %>/comments"
+          method="POST"
+        >
+          <textarea name="content" id="content-textarea" style="width: 40%; max-width: 50%;"></textarea>
+          <label for="rated-select">Rate:</label>
+          <select name="rated" id="rated-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+          </select>
+        <div class="commentbutton">
+          <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+        </form>
+        <div class="totalrate">
+          <strong>Character Average Rating:<%= averageCommentScore %></strong>
+        </div>
+        <% if (characters.comments.length) { %>
+          <table>
+            <thead>
+              <tr>
+                <th>Avatar</th>
+                <th>User</th>
+                <th>Date</th>
+                <th>Comment</th>
+                <th>Rated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let total = 0 %> 
+              <% characters.comments.forEach(function(comment){ %>
+              <% total += comment.rated %> 
+                <tr>
+                  <td><%= comment.owner.name %></td>
+                  <td><img src="<%= comment.owner.avatar %>"></td>
+                  <td><%= comment.createdAt.toLocaleDateString() %> </td>
+                  <div class="comment">
+                  <td><span><%= comment.content %></span></td>
+                  </div>
+                    <td><%= comment.rated %> </td>
+                </tr>
+              <% }) %>
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+
             <% } else { %>
               <h3>No Comments Yet</h3>
             <% } %>
-          </container>
-</container>
+    </div>
+  </div>
 
 
 

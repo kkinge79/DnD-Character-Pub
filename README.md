@@ -60,6 +60,9 @@
       <li>basic stats of your hp/armor/proficiencies</li>
       <li>Attacks</li>
     </ol>
+    <li> More accessable navbar with different look in mobile</li>
+    <li> easier to read styling</li>
+    <li>help tip work in mobile</li>
 </ul>
 
 <br><br>

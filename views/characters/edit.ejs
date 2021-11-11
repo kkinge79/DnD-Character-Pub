@@ -20,18 +20,18 @@
     <!-- RACE -->
     <label>
       Race:
-        <select name="race">
-          <option value="<%= character.race %>"><%= character.race %></option>
-          <option value="Dragonborn">Dragonborn</option>
-          <option value="Dwarf">Dwarf</option>
-          <option value="Elf">Elf</option>
-          <option value="Gnome">Gnome</option>
-          <option value="Half-Elf">Half-Elf</option>
-          <option value="Halfling">Halfling</option>
-          <option value="Half-Orc">Half-Orc</option>
-          <option value="Human">Human</option>
-          <option value="Tiefling">Tiefling</option>
-        </select>
+      <select name="race">
+        <option value="<%= character.race %>"><%= character.race %></option>
+        <option value="Dragonborn">Dragonborn</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Elf">Elf</option>
+        <option value="Gnome">Gnome</option>
+        <option value="Half-Elf">Half-Elf</option>
+        <option value="Halfling">Halfling</option>
+        <option value="Half-Orc">Half-Orc</option>
+        <option value="Human">Human</option>
+        <option value="Tiefling">Tiefling</option>
+      </select>
     </label></br>
     <!-- CLASS -->
     <label>
@@ -55,7 +55,7 @@
     <!-- AGE -->
     <label>
       Age:
-        <input type="number" min="10" max="1000" name="age" placeholder="10-1000"value="<%= character.age %>" required>
+      <input type="number" min="10" max="1000" name="age" placeholder="10-1000"value="<%= character.age %>" required>
     </label></br>
     <!-- ALIGNMENT -->
     <label>
@@ -101,7 +101,7 @@
     <h2>PERSONALITY</h2>
     <div id="help">
       <!-- PERSOANLITY TRAITS -->
-    <h5>Choose 2 personality Traits</h5>
+      <h5>Choose 2 personality Traits</h5>
     <div class="help-tip">
       <p> Personality traits are small, simple ways to help you set your character apart from every other character. Your personality traits should tell you something interesting and fun about your character. They should be self-descriptions that are specific about what makes your character stand out.</p>
     </div>
@@ -159,37 +159,37 @@
     <h5>select 5 skills your character will be proficient in</h5>
     <p>CMD + Click for MAC</p>
     <p>CTRL + Click for WIN</p>
-          <span class="anchor">Select Skills</span>
-          <select name="skills" multiple="multiple">
-            <option option selected="selected"><%= character.skills %>.</option>
-            <option>Athletics</option>
-            <option>Acrobatics</option>
-            <option>Sleight of Hand</option>
-            <option>Stealth</option>
-            <option>Arcana</option>
-            <option>History</option>
-            <option>Investigation</option>
-            <option>Nature</option>
-            <option>Religion</option>
-            <option>Animal Handling</option>
-            <option>Insight</option>
-            <option>Medicine</option>
-            <option>Perception</option>
-            <option>Survival</option>
-            <option>Deception</option>
-            <option>Intimidation</option>
-            <option>Performance</option>
-            <option>Persuasion</option>
-          </select>
-        </label>
+      <span class="anchor">Select Skills</span>
+      <select name="skills" multiple="multiple">
+        <option option selected="selected"><%= character.skills %>.</option>
+        <option>Athletics</option>
+        <option>Acrobatics</option>
+        <option>Sleight of Hand</option>
+        <option>Stealth</option>
+        <option>Arcana</option>
+        <option>History</option>
+        <option>Investigation</option>
+        <option>Nature</option>
+        <option>Religion</option>
+        <option>Animal Handling</option>
+        <option>Insight</option>
+        <option>Medicine</option>
+        <option>Perception</option>
+        <option>Survival</option>
+        <option>Deception</option>
+        <option>Intimidation</option>
+        <option>Performance</option>
+        <option>Persuasion</option>
+        </select>
+    </label>
 
-      <h2 class="addinfo">Additional information</h2>
-      <label>
-        <textarea rows="5" cols="40" id="title" name="descript"><%= character.descript %></textarea>
-      </label><br>
-      <div class="d-grid gap-2 col-8 mx-auto">
-    <button type="submit" id="create-button" class="btn btn-primary">Save</button>
-  </div>
+    <h2 class="addinfo">Additional information</h2>
+    <label>
+      <textarea rows="5" cols="40" id="title" name="descript"><%= character.descript %></textarea>
+    </label><br>
+    <div class="d-grid gap-2 col-8 mx-auto">
+      <button type="submit" id="create-button" class="btn btn-primary">Save</button>
+    </div>
   </form>
   <br><br>
 </main>

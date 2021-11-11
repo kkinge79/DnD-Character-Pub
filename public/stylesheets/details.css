@@ -17,7 +17,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: black;
+  padding: 5px;
+  margin: 0 10% 0 10%;
 }
 
 h2 {
@@ -32,7 +36,7 @@ h2 {
 p {
   font-size: 24px;
   text-align: center;
-  width: 60%;
+  width: 80%;
 }
 
 img {
@@ -79,15 +83,16 @@ form {
   margin: 20px 0;
   justify-content: center;
   align-items: center;
+
   }
 
   .comment {
-    width: 40px;
+    width: 60px;
 
   }
 
   span {
-    word-break:break-all;
+    word-break: inherit;
     padding: 0 10px;
 
   }
@@ -101,6 +106,20 @@ form {
     margin: 15px 0;
   }
 
+
+#commentsection {
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: black;
+  padding: 5px;
+  margin: 5% 5% 2% 5%;
+}
+
+div.totalrate {
+  font-size: 25px;
+  padding: 10px 10px 20px 10px;
+}
 
 @media screen and (max-width:480px) {
   body {
@@ -132,12 +151,13 @@ form {
     text-align: center;
   }
 
-  .totalrate {
-    justify-content: right;
+  div.totalrate {
+    justify-content: center;
     align-items: center;
-  text-align: right; 
-  width: 100%; 
-  padding: 10px;
+    text-align: center; 
+    width: 100%; 
+    font-size: 15px;
+    padding: 10px 10px 20px 10px;
 }
 
 
@@ -147,10 +167,13 @@ form {
   margin: 10px 0;
   justify-content: center;
   align-items: center;
+  
   }
 
 #commentsection {
   padding: 0 20px;
+  font-size: 11px;
+  margin: 0;
 }
 
 .commentbutton {
@@ -160,7 +183,5 @@ form {
 textarea {
   width: 100px;
 }
-#content-textarea {
-  width: 100px;
-}
+
 }

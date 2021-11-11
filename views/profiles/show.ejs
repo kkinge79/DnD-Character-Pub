@@ -23,7 +23,9 @@
       <table>
         <thead>
           <tr>
-            <th id="name">Name:</th>
+            <div class="name">
+            <th id="name"><span>Name:</span></th>
+            </div>
             <th id="race">Race:</th>
             <th id="class">Class</th>
           </tr>
@@ -35,12 +37,12 @@
         <td id="race"><%= c.race %></td>
         <td id="class"><%= c.class %></td>
         <td>
-          <a href="/characters/<%= c._id %>">Details</a>
+          <a class="details" href="/characters/<%= c._id %>">Details</a>
         </td>
       </tr>
       <% }) %>
       <% } else { %>
-        <h2>No Characters Yet :(</h2>
+        <h2><strong>No Characters Yet :(</strong><h2>
         <% } %> 
       </table>
       </container>
