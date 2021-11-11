@@ -10,40 +10,34 @@
 <%- include('../partials/nav') %>
 
 <container>
-  <table>
-    <thead>
-      <tr>
-        <th>Name:</th>
-        <th>Race:</th>
-        <th>Class:</th>
-        <th>Age:</th>
-        <th>Alignment:</th>
-        <th>Background:</th>
-        <th>Personality Traits:</th>
-        <th>Ideals:</th>
-        <th>Bonds:</th>
-        <th>Flaws:</th>
-        <th>Skills:</th>
-        <th>Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= characters.name %></td>
-        <td><%= characters.race %></td>
-        <td><%= characters.class %></td>
-        <td><%= characters.age %></td>
-        <td><%= characters.alignment %></td>
-        <td><%= characters.background %></td>
-        <td><%= characters.ptone %>,<%= characters.pttwo %></td>
-        <td><%= characters.ideals %></td>
-        <td><%= characters.bonds %></td>
-        <td><%= characters.flaws %></td>
-        <td><%= characters.skills %></td>
-        <td><%- characters.descript %></td>
-      </tr>
-    </tbody>
-  </table>
+      <div id="info">
+        <h2>Name</h2>
+        <p><%= characters.name %></p>
+        <h2>Race</h2>
+        <p><%= characters.race %></p>
+        <h2>Class</h2>
+        <p><%= characters.class %></p>
+        <h2>Age</h2>
+        <p><%= characters.age %></p>
+        <h2>Alignment</h2>
+        <p><%= characters.alignment %></p>
+        <h2>Background</h2>
+        <p><%= characters.background %></p>
+        <h2>Personality Traits</h2>
+        <p><%= characters.ptone %>,<%= characters.pttwo %></p>
+        <h2>Ideals</h2>
+        <p><%= characters.ideals %></p>
+        <h2>Bonds</h2>
+        <p><%= characters.bonds %></p>
+        <h2>Flaws</h2>
+        <p><%= characters.flaws %></p>
+        <h2>Skills</h2>
+        <p><%= characters.skills %></p>
+        <h2>Details</h2>
+        <p><%= characters.descript %></p>
+      </div>
+
+
           <% if (characters.owner.equals(user?.profile._id)) { %>
             <form action="/characters/<%= characters._id %>/edit" method="GET">
               <button class="btn btn-primary" type="submit">Edit character</button>

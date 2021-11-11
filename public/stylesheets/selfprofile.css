@@ -53,8 +53,7 @@ a {
   text-align: center;
   justify-content: right;
   align-items: right;
-  margin-right: 7px;
-  padding: 0 20px;
+  margin-right: 20px;
 }
 
 table {
@@ -73,7 +72,7 @@ button {
 }
 
 #name, #class, #race {
-  padding: 0 20px;
+  padding: 7px 20px;
 
 }
 
@@ -125,12 +124,21 @@ button {
     font-size: 13px;
     text-align: center;
   }
+
+  .name {
+    width: 40px;
+}
+span {
+    word-break: break-word
+}
   
   a {
-    font-size: 17px;
+    font-size: 10px;
     text-align: right;
     justify-content: right;
     align-items: right;
+    margin-bottom: 6px;
+    text-decoration: none;
   }
   
   table {
