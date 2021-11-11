@@ -49,11 +49,12 @@ td {
 }
 
 a {
-  font-size: 27px;
+  font-size: 19px;
   text-align: center;
   justify-content: right;
   align-items: right;
   margin-right: 7px;
+  padding: 0 20px;
 }
 
 table {
@@ -62,8 +63,7 @@ table {
   margin: auto;
   padding-top: 10px;
   border-radius: 5px;
-  border: 2px solid black;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.65);
   color: black;
   padding: 5px;
 }
