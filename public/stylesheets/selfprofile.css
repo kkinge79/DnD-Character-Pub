@@ -36,6 +36,8 @@ h2 {
 
 img {
   border-radius: 50%;
+  border: 2px solid black;
+  
 }
 
 th {
@@ -53,6 +55,9 @@ a {
   text-align: center;
   justify-content: right;
   align-items: right;
+}
+
+.details {
   margin-right: 20px;
 }
 
@@ -137,7 +142,6 @@ span {
     text-align: right;
     justify-content: right;
     align-items: right;
-    margin-bottom: 6px;
     text-decoration: none;
   }
   
