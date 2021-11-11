@@ -68,6 +68,7 @@
 <ul>
   <li>font awesome icons</li>
   <li>homescreen background image- reddit user u/RoyWijnen</li>
-  <li>create character background image - wallpapertip.com -contributor: Chao Krung Thai
+  <li>create character background image - wallpapertip.com -contributor: Chao Krung Thai</li>
+  <li> profile wallpaper - Tyler Giesbrecht - pinterest</li>
 
 </ul>

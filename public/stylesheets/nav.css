@@ -3,6 +3,8 @@ nav {
   background-color: white;
   width: 100%;
   border-bottom: 2px solid black;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 nav a {
@@ -22,7 +24,10 @@ i.fas.fa-dragon {
 }
 
 @media screen and (max-width:480px) {
-
+body {
+  font-family: 'Karla', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+}
  nav a {
    font-size: 10px;
  }
