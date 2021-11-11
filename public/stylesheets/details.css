@@ -1,17 +1,38 @@
-/* html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-} */
+body {
+  font-family: 'Karla', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-image: url("../images/addImages/d20wp.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
 #info {
   display: flex;
   flex-direction: column;
-  text-align: left;
   justify-content: center;
   align-items: center;
+  
 }
 
 h2 {
+  font-size: 20px;
+  text-decoration: underline;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+p {
   font-size: 24px;
+  text-align: center;
+  width: 60%;
 }
 
 img {
@@ -21,15 +42,125 @@ img {
 }
 
 button.btn.btn-primary {
+  display: flex;
   background-color: black;
   border-color: black;
-  font-size: 15px;
+  margin:  0 5px;
+  font-size: 23px;
+}
+
+textarea{
+  width: 100px;
 }
 
 
+#editdelete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 10px;
+}
+
+table {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+form {
+  margin: 0 15px;
+}
+
+#add-comment-form{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .comment {
+    width: 40px;
+
+  }
+
+  span {
+    word-break:break-all;
+    padding: 0 10px;
+
+  }
+
+  td {
+    text-align: left;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+
 @media screen and (max-width:480px) {
-body {
-  font-family: 'Karla', sans-serif;
-  font-family: 'Source Sans Pro', sans-serif;
+  body {
+    font-family: 'Karla', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  #editdelete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 10px;
+  }
+
+
+
+  .comment {
+    width: 40px;
+  }
+
+  span {
+    word-break:break-all;
+    padding: 0 10px;
+  }
+
+  td {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .totalrate {
+    justify-content: right;
+    align-items: center;
+  text-align: right; 
+  width: 100%; 
+  padding: 10px;
+}
+
+
+#add-comment-form{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  }
+
+#commentsection {
+  padding: 0 20px;
+}
+
+.commentbutton {
+  padding-top: 10px;
+}
+
+textarea {
+  width: 100px;
+}
+#content-textarea {
+  width: 100px;
 }
 }

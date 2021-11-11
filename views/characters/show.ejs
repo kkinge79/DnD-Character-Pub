@@ -10,55 +10,52 @@
 <%- include('../partials/nav') %>
 
 <container>
+  <div id="editdelete">
+  <% if (characters.owner.equals(user?.profile._id)) { %>
+    <form action="/characters/<%= characters._id %>/edit" method="GET">
+      <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+    <form action="/characters/<%= characters._id %>?_method=DELETE" method="POST">
+      <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+    </div>
+    <% } %>
+
       <div id="info">
         <h2>Name</h2>
-        <p><%= characters.name %></p>
+        <p><span><%= characters.name %></span></p>
         <h2>Race</h2>
-        <p><%= characters.race %></p>
+        <p><span><%= characters.race %></span></p>
         <h2>Class</h2>
-        <p><%= characters.class %></p>
+        <p><span><%= characters.class %></span></p>
         <h2>Age</h2>
-        <p><%= characters.age %></p>
+        <p><span><%= characters.age %></span></p>
         <h2>Alignment</h2>
-        <p><%= characters.alignment %></p>
+        <p><span><%= characters.alignment %></span></p>
         <h2>Background</h2>
-        <p><%= characters.background %></p>
+        <p><span><%= characters.background %></span></p>
         <h2>Personality Traits</h2>
-        <p><%= characters.ptone %>,<%= characters.pttwo %></p>
+        <p><span><%= characters.ptone %>,<%= characters.pttwo %></span></p>
         <h2>Ideals</h2>
-        <p><%= characters.ideals %></p>
+        <p><span><%= characters.ideals %></span></p>
         <h2>Bonds</h2>
-        <p><%= characters.bonds %></p>
+        <p><span><%= characters.bonds %></span></p>
         <h2>Flaws</h2>
-        <p><%= characters.flaws %></p>
+        <p><span><%= characters.flaws %></span></p>
         <h2>Skills</h2>
-        <p><%= characters.skills %></p>
+        <p><span><%= characters.skills %></span></p>
         <h2>Details</h2>
-        <p><%= characters.descript %></p>
+        <p><span><%= characters.descript %></span>></p>
       </div>
 
-
-          <% if (characters.owner.equals(user?.profile._id)) { %>
-            <form action="/characters/<%= characters._id %>/edit" method="GET">
-              <button class="btn btn-primary" type="submit">Edit character</button>
-            </form>
-            <form action="/characters/<%= characters._id %>?_method=DELETE" method="POST">
-              <button class="btn btn-primary" type="submit">Delete</button>
-            </form>
-            <% } %>
-
-
-
             <h2>Comments</h2>
+            <container id="commentsection">
             <form 
               id="add-comment-form"
               action="/characters/<%= characters._id %>/comments"
               method="POST"
             >
-          
-            
-              <label for="content-textarea">Comment:</label>
-              <textarea name="content" id="content-textarea"></textarea>
+              <textarea name="content" id="content-textarea" style="width: 40%; max-width: 50%;"></textarea>
               <label for="rated-select">Rate:</label>
               <select name="rated" id="rated-select">
                 <option value="1">1</option>
@@ -67,11 +64,10 @@
                 <option value="4">4</option>
                 <option value="5" selected>5</option>
               </select>
-              <button type="submit" class="btn btn-primary">Add Comment</button>
+              <div class="commentbutton">
+              <button type="submit" class="btn btn-primary">Add</button>
+              </div>
             </form>
-          
-          
-          
             <% if (characters.comments.length) { %>
               <table>
                 <thead>
@@ -92,21 +88,26 @@
                       <td><%= comment.owner.name %></td>
                       <td><img src="<%= comment.owner.avatar %>"></td>
                       <td><%= comment.createdAt.toLocaleDateString() %> </td>
-                      <td><%= comment.content %></td>
+                      <div class="comment">
+                      <td><span><%= comment.content %></span></td>
+                      </div>
                       <td><%= comment.rated %> </td>
                     </tr>
-                  <% }) %>
-                  <tr>
-                    <td colspan="2"></td>
-                    <td>
-                      <strong><%= averageCommentScore %></strong>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    <% }) %>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="totalrate">
+                <strong><%= averageCommentScore %></strong>
+                </div>
             <% } else { %>
               <h3>No Comments Yet</h3>
             <% } %>
+          </container>
 </container>
 
 
