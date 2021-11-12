@@ -51,6 +51,10 @@
 <br>
 <p>HomeScreen</p>
 <img src="../DnD-Character-Pub/public/images/addImages/home.png">
+<p>Create a Character</p>
+<img src="../DnD-Character-Pub/public/images/addImages/create.png">
+<p>Profile</p>
+<img src="../DnD-Character-Pub/public/images/addImages/profile.png">
 
 <br><br>
 
