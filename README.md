@@ -17,12 +17,12 @@
 
 <br><br>
 
-<h3>Heroku Link</h3>
+<h3>-Heroku Link</h3>
 <a href="https://dnd-character-pub-k.herokuapp.com/">DnD Character Pub</a>
 
 <br><br>
 
-<h3>Trello Board</h3>
+<h3>-Trello Board</h3>
 <a href="https://trello.com/b/XuGeblDg/dnd-character-pub">Trello Planning</a>
 
 <br><br>
@@ -44,17 +44,17 @@
 
 <h3>- ScreenShots </h3>
 <p>wireframe</p>
-<img src="../DnD-Character-Pub/public/images/addImages/wireframe.png">
+<img src="public/images/addImages/wireframe.png">
 <br>
 <p>ERD</p>
-<img src="../DnD-Character-Pub/public/images/addImages/erd.png">
+<img src="public/images/addImages/erd.png">
 <br>
 <p>HomeScreen</p>
-<img src="../DnD-Character-Pub/public/images/addImages/home.png">
+<img src="public/images/addImages/home.png">
 <p>Create a Character</p>
-<img src="../DnD-Character-Pub/public/images/addImages/create.png">
+<img src="public/images/addImages/create.png">
 <p>Profile</p>
-<img src="../DnD-Character-Pub/public/images/addImages/profile.png">
+<img src="public/images/addImages/profile.png">
 
 <br><br>
 
