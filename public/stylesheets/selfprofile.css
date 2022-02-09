@@ -3,7 +3,7 @@
 body {
   font-family: 'Karla', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
-  background-image: url("../images/addImages/d20wp.jpeg");
+  background-image: url("/images/background.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -20,11 +20,11 @@ div {
   justify-content: center;
   margin-top: 15px;
   padding-bottom: 40px;
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 h1 {
-  padding-left: 7px;
+  padding-left: 15px;
   text-align: center;
   font-size: 40px;
   color: black;
@@ -68,7 +68,7 @@ table {
   margin: auto;
   padding-top: 10px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: rgb(255, 255, 255);
   color: black;
   padding: 5px;
 }
