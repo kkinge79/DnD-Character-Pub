@@ -6,13 +6,6 @@
 <link rel="stylesheet" href="/stylesheets/home.css">
 
 <%- include('./partials/nav') %>
-
-<main>
-  <img src="/images/multiverse.jpeg" alt="cover art"/>
-  <p class="body">
-    Sign in to be able to create your own Dungeons and Dragons Character! Customize them however you want! All your characters will be displayed on your profile for others to see, comment and rate! I created this app based off one of my favorite hobbies, and i hope you enjoy this website as much as i had creating it. More updates soon to come to allow you to further enhance your characters! Happy Creating.
-  </p>
-</main>
 <% if (user) { %>
   <!-- <a href="/auth/logout">
     <button type="submit">Logout</button>
@@ -24,4 +17,10 @@
     </button>
   </a>
 <% } %>
+<main>
+  <img src="/images/multiverse.jpeg" alt="cover art"/>
+  <p class="body">
+    Sign in to be able to create your own Dungeons and Dragons Character! Customize them however you want! All your characters will be displayed on your profile for others to see, comment and rate! I created this app based off one of my favorite hobbies, and i hope you enjoy this website as much as i had creating it. More updates soon to come to allow you to further enhance your characters! Happy Creating.
+  </p>
+</main>
 <%- include('./partials/footer') %>
