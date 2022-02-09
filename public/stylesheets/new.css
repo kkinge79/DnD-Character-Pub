@@ -8,6 +8,14 @@ background-attachment: fixed;
 background-size: cover;
 }
 
+main{
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-left: 20px;
+}
+
+
 main > h1 {
   font-size: 34px;
   margin-top: 30px;
@@ -30,7 +38,7 @@ h5 {
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
   font-size: 26px;
   padding: 10px 0;
@@ -40,8 +48,8 @@ form {
 label {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin: 0px 10px;
   font-size: 20px;
   font-weight:bold;
@@ -230,7 +238,7 @@ a {
   form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     font-size: 19px;
   }
