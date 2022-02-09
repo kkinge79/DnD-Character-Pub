@@ -1,7 +1,7 @@
 body {
   font-family: 'Karla', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
-  background-image: url("../images/addImages/d20wp.jpeg");
+  background-image: url("/images/background.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,8 +17,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.65);
   color: black;
   padding: 5px;
 }
@@ -108,10 +106,9 @@ form {
 
 #commentsection {
   font-size: 15px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.65);
   color: black;
   padding: 5px;
+  margin-bottom: 20px;
 }
 
 div.totalrate {
@@ -172,6 +169,7 @@ div.totalrate {
   padding: 0 20px;
   font-size: 11px;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .commentbutton {
