@@ -1,7 +1,7 @@
 body {
   font-family: 'Karla', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;
-background-image: url("../images/addImages/createwp.jpg");
+background-image: url("/images/background.jpeg");
 background-position: center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -30,8 +30,8 @@ h5 {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: right;
+  align-items: flex-start;
+  text-align: left;
   font-size: 26px;
   padding: 10px 0;
 }
@@ -40,8 +40,8 @@ form {
 label {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 0px 10px;
   font-size: 20px;
   font-weight:bold;
@@ -59,7 +59,7 @@ input {
   margin-top: 2px;
   margin-bottom: 5px;
   width: 250px;
-  align-items: center;
+  align-items:flex-start;
 }
 
 textarea {
@@ -230,8 +230,8 @@ a {
   form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: right;
+    align-items: flex-start;
+    text-align: left;
     font-size: 19px;
   }
   
@@ -239,7 +239,7 @@ a {
   label {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     margin: 0px 10px;
     font-size: 17px;
     font-weight:bold;
