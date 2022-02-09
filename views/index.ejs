@@ -1,5 +1,4 @@
 <%- include('./partials/html-head') %>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karla:wght@519&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
@@ -9,7 +8,10 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <p>Welcome to DnD Character Pub, an app to make your own Dungeons and Dragons characters as well as see what other people have made! You can leave comments and ratings on other peoples characters! Sign in to continue</p>
+  <img src="/images/multiverse.jpeg" alt="cover art"/>
+  <p class="body">
+    Sign in to be able to create your own Dungeons and Dragons Character! Customize them however you want! All your characters will be displayed on your profile for others to see, comment and rate! I created this app based off one of my favorite hobbies, and i hope you enjoy this website as much as i had creating it. More updates soon to come to allow you to further enhance your characters! Happy Creating.
+  </p>
 </main>
 <% if (user) { %>
   <!-- <a href="/auth/logout">

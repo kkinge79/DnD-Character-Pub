@@ -1,25 +1,24 @@
 body {
-  background-image: url("../images/addImages/background-image.jpeg") ;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-image: url("/images/background.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: white;
-  font-family: 'Karla', sans-serif;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-p {
+img {
+  width: 47%;
+  margin: 2.8rem 0;
+  border-radius: 3px;
+}
+
+.body{
+  font-size: 2rem;
+  width: 60%;
   text-align: center;
-  width: 45%;
-  font-size: 24px;
-  margin-bottom: 40px;
-  background-color: rgb(212, 212, 212, 0.6);
-  margin-top: 50px;
-  border-radius: 5px;
-  color: black;
-  padding: 5px;
-  line-height: 30px;
+
 }
 
 a {
@@ -32,6 +31,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2.8rem;
 }
 
 h1 {
@@ -43,18 +43,12 @@ h1 {
 
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:580px) {
 body {
   font-family: 'Karla', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
 }
-p {
-  width: 75%;
-  font-size: 22px;
-  background-color: rgb(212, 212, 212, 0.6);
-  margin-top: 50px;
-  border-radius: 5px;
-  color: black;
-  padding: 5px;
-  }
+img {
+  width: 90%;
+}
 }
