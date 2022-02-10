@@ -50,6 +50,7 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: left;
   margin: 0px 10px;
   font-size: 20px;
   font-weight:bold;
